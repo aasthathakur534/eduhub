@@ -1,6 +1,5 @@
-nav{
+nav {
     width: 100%;
-    background: #333333;
     color: #fff;
     padding: 4px 0;
     position: fixed;
@@ -11,9 +10,11 @@ nav{
     justify-content: space-between;
     z-index: 10;
 }
-.logo{
+
+.logo {
     width: 180px;
 }
+
 nav ul li{
     display: inline-block;
     line-style: none;
