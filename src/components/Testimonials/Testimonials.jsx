@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Testimonials.css'
 import next_icon from '../../assets/next-icon.png'
 import back_icon from '../../assets/back-icon.png'
@@ -7,88 +7,90 @@ import user_2 from '../../assets/user-2.png'
 import user_3 from '../../assets/user-3.png'
 import user_4 from '../../assets/user-4.png'
 
-
-
-
 const Testimonials = () => {
-  return (
-    <div className='testimonials'>
-        <img src={next_icon} alt="" className='next-btn' />
-        <img src={back_icon} alt="" className='back-btn' />
-        <div className="slider">
-            <ul>
-                <li>
-                    <div className="slide">
-                        <div className="user-info">
-                            <img src={user_1} alt="" />
-                            <div>
-                                <h3>William Jackson</h3>
-                                <span>Edusity, USA</span>
-                            </div>  
+    const slider = useRef(null);
+    let tx = 0;
+
+    const slideForward = () => {
+        if (tx > -50) {
+            tx -= 25;
+        }
+        slider.current.style.transform = `translateX(${tx}%)`;
+    }
+
+    const slideBackward = () => {
+        if (tx < 0) {
+            tx += 25;
+        }
+        slider.current.style.transform = `translateX(${tx}%)`;
+    }
+
+    return (
+        <div className='testimonials'>
+            <img src={next_icon} alt="" className='next-btn' onClick={slideForward} />
+            <img src={back_icon} alt="" className='back-btn' onClick={slideBackward} />
+            <div className="slider">
+                <ul ref={slider}>
+                    <li>
+                        <div className="slide">
+                            <div className="user-info">
+                                <img src={user_1} alt="" />
+                                <div>
+                                    <h3>William Jacksonn 1</h3>
+                                    <span>Edusity, USA</span>
+                                </div>
+                            </div>
+                            <p>
+                                I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
+                            </p>
                         </div>
-                        <p>
-                            I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
-
-
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div className="slide">
-                        <div className="user-info">
-                            <img src={user_2} alt="" />
-                            <div>
-                                <h3>William Jackson</h3>
-                                <span>Edusity, USA</span>
-                            </div>  
+                    </li>
+                    <li>
+                        <div className="slide">
+                            <div className="user-info">
+                                <img src={user_2} alt="" />
+                                <div>
+                                    <h3>William Jackson 2</h3>
+                                    <span>Edusity, USA</span>
+                                </div>
+                            </div>
+                            <p>
+                                I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
+                            </p>
                         </div>
-                        <p>
-                            I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
-
-
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div className="slide">
-                        <div className="user-info">
-                            <img src={user_3} alt="" />
-                            <div>
-                                <h3>William Jackson</h3>
-                                <span>Edusity, USA</span>
-                            </div>  
+                    </li>
+                    <li>
+                        <div className="slide">
+                            <div className="user-info">
+                                <img src={user_3} alt="" />
+                                <div>
+                                    <h3>William Jackson 3</h3>
+                                    <span>Edusity, USA</span>
+                                </div>
+                            </div>
+                            <p>
+                                I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
+                            </p>
                         </div>
-                        <p>
-                            I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
-
-
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div className="slide">
-                        <div className="user-info">
-                            <img src={user_4} alt="" />
-                            <div>
-                                <h3>William Jackson</h3>
-                                <span>Edusity, USA</span>
-                            </div>  
+                    </li>
+                    <li>
+                        <div className="slide">
+                            <div className="user-info">
+                                <img src={user_4} alt="" />
+                                <div>
+                                    <h3>William Jackson 4</h3>
+                                    <span>Edusity, USA</span>
+                                </div>
+                            </div>
+                            <p>
+                                I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
+                            </p>
                         </div>
-                        <p>
-                            I have chosen to pursue my career through Edusity because of its strong commitment to quality education, practical learning, and industry-relevant training. Edusity’s well-structured curriculum, experienced faculty, and focus on real-world skills align perfectly with my career goals and aspirations. I believe this platform will provide me with the right foundation, exposure, and guidance to grow both academically and professionally in today’s competitive landscape.
-
-
-                        </p>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-      
-
-      
-    </div>
-  )
+    )
 }
 
 export default Testimonials
