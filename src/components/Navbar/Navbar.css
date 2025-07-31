@@ -32,7 +32,13 @@ nav ul li{
 color: #fff !important;
 }
 .menu-icon{
-    display: none;
+    display: block;
+    width: 25px 25px;
+    cursor: pointer;
+}
+.menu-icon img{
+    max-width: 100%;
+    height: auto;
 }
 /* media query to make webpage responsive so that it works well in tablets mobile phones*/
 @media (max-width: 1000px){
@@ -51,7 +57,7 @@ color: #fff !important;
     nav ul{
         position: fixed;
         top: 0;
-        right: 0;
+        right: 0px;
         bottom: 0;
         background: #212EA0;
         z-index: -1;
@@ -60,7 +66,10 @@ color: #fff !important;
         transition: 0.5s;
     }
     nav ul li{
-        display: bliock;
+        display: block;
         margin: 25px 40px;
     }
+.hide-mobile-menu{
+    right: -200px;
+}
 }
