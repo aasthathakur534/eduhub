@@ -40,7 +40,7 @@ const Contact = () => {
           We’re always here to help and answer any questions you may have. Whether you need support, want to give feedback, or just want to say hello, don’t hesitate to get in touch. Your satisfaction is our priority, and we look forward to connecting with you soon!</p>
         <ul>
           <li><img src={mail_icon} alt="" />xyz@gmail.com</li>
-          <li><img src={phone_icon} alt="" />8580XXXX</li>
+          <li><img src={phone_icon} alt="" />8580XXXXX</li>
           <li><img src={location_icon} alt="" />77 Massachusettes Ave,Cambridge<br /> MA 02139, United States</li>
         </ul>
       </div>
